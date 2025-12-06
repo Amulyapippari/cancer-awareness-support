@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cancer Awareness & Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about cancer awareness, early detection, and how you can support patients and their families."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="nav-container">
+        <div class="logo">Hope<span>Care</span></div>
+        <nav class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#support">Support</a>
+          <a href="#quotes">Quotes</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero / Landing Section -->
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-tagline">Cancer Awareness & Support</p>
+          <h1>Early Detection. Compassionate Support. Stronger Together.</h1>
+          <p class="hero-text">
+            Cancer affects millions of families across the world. By spreading
+            awareness, encouraging regular screenings, and supporting those in
+            treatment, we can bring hope and strength to those who need it most.
+          </p>
+          <div class="hero-actions">
+            <a href="#about" class="btn primary">Learn More</a>
+            <a href="#contact" class="btn ghost">Reach Out</a>
+          </div>
+        </div>
+        <div class="hero-banner" aria-hidden="true"></div>
+      </section>
+
+      <!-- About / Awareness Section -->
+      <section class="section" id="about">
+        <div class="section-header">
+          <h2>Why Cancer Awareness Matters</h2>
+          <p>
+            Awareness leads to early detection, better treatment outcomes, and
+            emotional support for patients and their loved ones.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Early Detection</h3>
+            <p>
+              Regular check-ups, screenings, and self-exams help detect cancer
+              at an early stage, when treatment is often more effective and less
+              intense.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Emotional Support</h3>
+            <p>
+              A strong support system of family, friends, and communities can
+              make the journey less overwhelming for patients and caregivers.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Spreading Hope</h3>
+            <p>
+              Sharing stories of survival and resilience inspires others to keep
+              fighting and reminds them that they are not alone.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Support Resources Section -->
+      <section class="section soft-bg" id="support">
+        <div class="section-header">
+          <h2>How You Can Support</h2>
+          <p>
+            Small actions can bring big comfort. Here are a few ways you can
+            help people living with cancer.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card outline">
+            <h3>Listen & Be Present</h3>
+            <p>
+              Sometimes the most powerful support is simply being there to
+              listen without judgment or advice.
+            </p>
+          </article>
+          <article class="card outline">
+            <h3>Volunteer or Donate</h3>
+            <p>
+              Contribute to local cancer support groups, hospitals, and NGOs
+              that provide financial and emotional aid.
+            </p>
+          </article>
+          <article class="card outline">
+            <h3>Raise Awareness</h3>
+            <p>
+              Share verified information, organize awareness events, or use
+              social media to encourage regular health check-ups.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Real-time Quotes Section -->
+      <section class="section" id="quotes">
+        <div class="section-header">
+          <h2>Words of Strength</h2>
+          <p>
+            Here are some real-time inspirational quotes to remind you that hope
+            is always alive.
+          </p>
+        </div>
+        <div class="quotes-wrapper">
+          <div class="quote-card">
+            <p id="quoteText" class="quote-text">Loading quote...</p>
+            <p id="quoteAuthor" class="quote-author"></p>
+          </div>
+          <button id="newQuoteBtn" class="btn primary small">
+            New Quote
+          </button>
+          <p class="quote-note">
+            Quotes fetched in real-time from a public quotes API.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section soft-bg" id="contact">
+        <div class="section-header">
+          <h2>Contact & Support</h2>
+          <p>
+            If you’re looking for information, emotional support, or want to
+            collaborate on awareness initiatives, reach out using the form
+            below.
+          </p>
+        </div>
+        <div class="contact-layout">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name<span>*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+              <p class="error-msg" data-for="name"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email<span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+              <p class="error-msg" data-for="email"></p>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message<span>*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="How can we support you?"
+                required
+              ></textarea>
+              <p class="error-msg" data-for="message"></p>
+            </div>
+
+            <button type="submit" class="btn primary full-width">
+              Send Message
+            </button>
+            <p id="formStatus" class="form-status"></p>
+          </form>
+
+          <aside class="contact-info">
+            <h3>You Are Not Alone</h3>
+            <p>
+              If you or someone you love is facing cancer, remember: reaching
+              out for help is a sign of strength, not weakness.
+            </p>
+            <ul>
+              <li>Talk to a trusted doctor for medical guidance.</li>
+              <li>Reach out to counselors or therapists for emotional support.</li>
+              <li>Join local or online support groups and communities.</li>
+            </ul>
+            <p class="disclaimer">
+              This website is for awareness and support only and does not
+              replace professional medical advice.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> HopeCare – Cancer Awareness & Support.</p>
+      <p class="footer-tag">Spreading hope, strength, and awareness.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

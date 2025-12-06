@@ -26,26 +26,26 @@ const quoteAuthor = document.getElementById("quoteAuthor");
 const newQuoteBtn = document.getElementById("newQuoteBtn");
 
 async function fetchQuote() {
-  if (!quoteText || !quoteAuthor) return;
-
-  quoteText.textContent = "Fetching a little dose of hope...";
+  quoteText.textContent = "Loading inspiring words...";
   quoteAuthor.textContent = "";
 
   try {
-    const response = await fetch("https://api.quotable.io/random");
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
+    const response = await fetch("https://api.quotable.io/random", {
+      cache: "no-store"
+    });
+
+    if (!response.ok) throw new Error("Network error");
+
     const data = await response.json();
-    quoteText.textContent = data.content || "Stay strong. You are not alone.";
+    quoteText.textContent = data.content;
     quoteAuthor.textContent = data.author ? `— ${data.author}` : "";
   } catch (error) {
-    console.error(error);
     quoteText.textContent =
-      "Sometimes courage is the quiet voice at the end of the day saying, 'I will try again tomorrow.'";
+      "Believe in the person you are becoming. Every step forward matters.";
     quoteAuthor.textContent = "";
   }
 }
+
 
 if (newQuoteBtn) {
   newQuoteBtn.addEventListener("click", fetchQuote);
